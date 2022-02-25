@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+
+    </title>
+    <style>
+            .sidebar {
+            margin: 0;
+            padding: 0;
+            width: 200px;
+            background: rgb(18, 186, 73);
+            background: linear-gradient(45deg, rgba(18, 186, 73, 1) 0%, rgba(45, 46, 253, 1) 100%);
+            position: fixed;
+            height: 100%;
+            overflow: auto;
+        }
+        
+        .sidebar a {
+            display: block;
+            color: black;
+            padding: 16px;
+            text-decoration: none;
+            font-size: 40px;
+        }
+        
+        .sidebar a.active {
+            background-color: #072b00;
+            color: white;
+        }
+        
+        .sidebar a:hover:not(.active) {
+            background-color: #555;
+            color: white;
+        }
+        
+        div.content {
+            margin-left: 200px;
+            height: 100%;
+            background-color: rgb(46, 59, 32);
+        }
+        
+        .heading {
+            text-shadow: 0 .5rem 1rem black;
+            text-align: center;
+            color: rgb(207, 206, 206);
+            margin-top: 10px;
+            padding: 15px;
+        }
+        
+        div.gallery {
+            border: 1px solid #ccc;
+        }
+        
+        div.gallery:hover .button {
+            opacity: 1;
+        }
+        
+        div.gallery img {
+            width: 100%;
+            height: auto;
+        }
+        
+        div.desc {
+            padding: 15px;
+            text-align: center;
+            border: none;
+        }
+        
+        div.desc audio {
+            width: 100%;
+            border: none;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        .responsive {
+            padding-left: 6px;
+            padding-bottom: 6px;
+            float: left;
+            width: 24.99999%;
+        }
+        
+        @media only screen and (max-width: 700px) {
+            .responsive {
+                width: 49.99999%;
+                margin: 6px 0;
+            }
+        }
+        
+        @media only screen and (max-width: 500px) {
+            .responsive {
+                width: 100%;
+            }
+        }
+        
+        .image {
+            position: relative;
+        }
+        
+        .clearfix:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+        .button {
+            position: absolute;
+            left: 50px;
+            top: 100px;
+            opacity: 0;
+            transition: opacity .35s ease;
+            border-radius: 4px;
+            background-color: #2c2e2dd2;
+            border: none;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 28px;
+            padding: 20px;
+            width: 200px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 5px;
+        }
+        
+        .button a {
+            color: white;
+        }
+        
+        .button span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+        
+        .button span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+        
+        .button:hover span {
+            padding-right: 25px;
+        }
+        
+        .button:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+        
+        footer {
+            width: 100%;
+            display: inline-block;
+            margin: 2em 0;
+            height: 70px;
+            background-color: #999;
+        }
+        
+        footer .copyright {
+            width: 50%;
+            float: left;
+        }
+        
+        footer p {
+            padding-left: 10%;
+            color: white;
+            font-size: 0.7em;
+            line-height: 70px;
+            text-transform: capitalize;
+            letter-spacing: 1px;
+            @media (max-width: 600px) {
+                text-align: center;
+                padding: 0;
+            }
+    </style>
+</head>
+
+<body>
+    <div class="sidebar">
+        <a href="home.html">Home</a>
+        <a class="active" href="music.html">Music</a>
+        <a href="video.html">Video</a>
+    </div>
+
+    <div class="content">
+
+        <h1 class="heading">Treanding Songs</h1>
+
+        <div class="responsive">
+            <div class="gallery">
+                <div class="image">
+                    <button class="button" style="vertical-align:middle"><span><a href="https://raw.githubusercontent.com/vidithw20/My-files/master/Taylor%20Swift%20-%20Blank%20Space.mp3">Download</a> </span></button>
+                    <img src="https://desawanamusic.com/uploads/covers/thumb-remix52851585283372.jpg" alt="" width="600" height="400">
+                </div>
+                <div class="desc"><audio src="https://github.com/vidithw20/My-files/blob/master/Taylor%20Swift%20-%20Blank%20Space.mp3?raw=true" type="audio/mp3" controls></audio></div>
+            </div>
+        </div>
+        <div class="responsive">
+            <div class="gallery">
+                <div class="image">
+                    <button class="button" style="vertical-align:middle"><span><a href="https://raw.githubusercontent.com/vidithw20/My-files/master/Taylor%20Swift%20-%20Blank%20Space.mp3">Download</a> </span></button>
+                    <img src="https://i1.sndcdn.com/artworks-000438007944-ks7dcd-t500x500.jpg" alt="" width="600" height="400">
+                </div>
+                <div class="desc"><audio src="https://github.com/vidithw20/My-files/blob/master/Taylor%20Swift%20-%20Blank%20Space.mp3?raw=true" type="audio/mp3" controls></audio></div>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="gallery">
+                <div class="image">
+                    <button class="button" style="vertical-align:middle"><span><a href="https://raw.githubusercontent.com/vidithw20/My-files/master/Taylor%20Swift%20-%20Blank%20Space.mp3">Download</a> </span></button>
+                    <img src="https://upload.wikimedia.org/wikipedia/en/d/d1/Babycoverart.jpg" alt="" width="600" height="400">
+                </div>
+                <div class="desc"><audio src="https://github.com/vidithw20/My-files/blob/master/Taylor%20Swift%20-%20Blank%20Space.mp3?raw=true" type="audio/mp3" controls></audio></div>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="gallery">
+                <div class="image">
+                    <button class="button" style="vertical-align:middle"><span><a href="https://raw.githubusercontent.com/vidithw20/My-files/master/Taylor%20Swift%20-%20Blank%20Space.mp3">Download</a> </span></button>
+                    <img src="https://i.kfs.io/album/global/95958622,0v1/fit/500x500.jpg" alt="" width="600" height="400">
+                </div>
+                <div class="desc"><audio src="https://github.com/vidithw20/My-files/blob/master/Taylor%20Swift%20-%20Blank%20Space.mp3?raw=true" type="audio/mp3" controls></audio></div>
+            </div>
+        </div>
+
+
+
+        <div class="clearfix"></div>
+
+        <div class="responsive">
+            <div class="gallery">
+                <div class="image">
+                    <button class="button" style="vertical-align:middle"><span><a href="https://raw.githubusercontent.com/vidithw20/My-files/master/Taylor%20Swift%20-%20Blank%20Space.mp3">Download</a> </span></button>
+                    <img src="https://m.media-amazon.com/images/I/71p4jC0G9pL._SS500_.jpg" alt="" width="600" height="400">
+                </div>
+                <div class="desc"><audio src="https://github.com/vidithw20/My-files/blob/master/Taylor%20Swift%20-%20Blank%20Space.mp3?raw=true" type="audio/mp3" controls></audio></div>
+            </div>
+        </div>
+        <div class="responsive">
+            <div class="gallery">
+                <div class="image">
+                    <button class="button" style="vertical-align:middle"><span><a href="https://raw.githubusercontent.com/vidithw20/My-files/master/Taylor%20Swift%20-%20Blank%20Space.mp3">Download</a> </span></button>
+                    <img src="https://tune.lk/storage/app/public/img/artist/1592126931.jpg" alt="" width="600" height="400">
+                </div>
+                <div class="desc"><audio src="https://github.com/vidithw20/My-files/blob/master/Taylor%20Swift%20-%20Blank%20Space.mp3?raw=true" type="audio/mp3" controls></audio></div>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="gallery">
+                <div class="image">
+                    <button class="button" style="vertical-align:middle"><span><a href="https://raw.githubusercontent.com/vidithw20/My-files/master/Taylor%20Swift%20-%20Blank%20Space.mp3">Download</a> </span></button>
+                    <img src="https://i1.sndcdn.com/artworks-000336363438-29lzv3-t500x500.jpg" alt="" width="600" height="400">
+                </div>
+                <div class="desc"><audio src="https://github.com/vidithw20/My-files/blob/master/Taylor%20Swift%20-%20Blank%20Space.mp3?raw=true" type="audio/mp3" controls></audio></div>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="gallery">
+                <div class="image">
+                    <button class="button" style="vertical-align:middle"><span><a href="https://raw.githubusercontent.com/vidithw20/My-files/master/Taylor%20Swift%20-%20Blank%20Space.mp3">Download</a> </span></button>
+                    <img src="https://sarigama.lk/img/songs/appsong-zqezfb2gxzcdelae.jpg" alt="" width="600" height="400">
+                </div>
+                <div class="desc"><audio src="https://github.com/vidithw20/My-files/blob/master/Taylor%20Swift%20-%20Blank%20Space.mp3?raw=true" type="audio/mp3" controls></audio></div>
+            </div>
+        </div>
+
+
+
+        <div class="clearfix"></div>
+        <div class="responsive">
+            <div class="gallery">
+                <div class="image">
+                    <button class="button" style="vertical-align:middle"><span><a href="https://raw.githubusercontent.com/vidithw20/My-files/master/Taylor%20Swift%20-%20Blank%20Space.mp3">Download</a> </span></button>
+                    <img src="https://tune.lk/storage/app/public/img/artist/1566732661.jpg" alt="" width="600" height="400">
+                </div>
+                <div class="desc"><audio src="https://github.com/vidithw20/My-files/blob/master/Taylor%20Swift%20-%20Blank%20Space.mp3?raw=true" type="audio/mp3" controls></audio></div>
+            </div>
+        </div>
+
+
+        <div class="responsive">
+            <div class="gallery">
+                <div class="image">
+                    <button class="button" style="vertical-align:middle"><span><a href="https://raw.githubusercontent.com/vidithw20/My-files/master/Taylor%20Swift%20-%20Blank%20Space.mp3">Download</a> </span></button>
+                    <img src="https://tune.lk/storage/app/public/img/artist/1568394214.jpg" alt="" width="600" height="400">
+                </div>
+                <div class="desc"><audio src="https://github.com/vidithw20/My-files/blob/master/Taylor%20Swift%20-%20Blank%20Space.mp3?raw=true" type="audio/mp3" controls></audio></div>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="gallery">
+                <div class="image">
+                    <button class="button" style="vertical-align:middle"><span><a href="https://raw.githubusercontent.com/vidithw20/My-files/master/Taylor%20Swift%20-%20Blank%20Space.mp3">Download</a> </span></button>
+                    <img src="https://decibel.lk/assets/2018/11/Iraj-Kalpana-Nayanamadu.jpg" alt="" width="600" height="400">
+                </div>
+                <div class="desc"><audio src="https://github.com/vidithw20/My-files/blob/master/Taylor%20Swift%20-%20Blank%20Space.mp3?raw=true" type="audio/mp3" controls></audio></div>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="gallery">
+                <div class="image">
+                    <button class="button" style="vertical-align:middle"><span><a href="https://raw.githubusercontent.com/vidithw20/My-files/master/Taylor%20Swift%20-%20Blank%20Space.mp3">Download</a> </span></button>
+                    <img src="https://i.pinimg.com/originals/c0/f2/f1/c0f2f1e8329361e3924bf3245eef52b9.jpg" alt="" width="600" height="400">
+                </div>
+                <div class="desc"><audio src="https://github.com/vidithw20/My-files/blob/master/Taylor%20Swift%20-%20Blank%20Space.mp3?raw=true" type="audio/mp3" controls></audio></div>
+            </div>
+        </div>
+
+        <div class="clearfix"></div>
+        <div class="responsive">
+            <div class="gallery">
+                <div class="image">
+                    <button class="button" style="vertical-align:middle"><span><a href="https://raw.githubusercontent.com/vidithw20/My-files/master/Taylor%20Swift%20-%20Blank%20Space.mp3">Download</a> </span></button>
+                    <img src="https://desawanamusic.com/uploads/covers/thumb-remix52851585283372.jpg" alt="" width="600" height="400">
+                </div>
+                <div class="desc"><audio src="https://github.com/vidithw20/My-files/blob/master/Taylor%20Swift%20-%20Blank%20Space.mp3?raw=true" type="audio/mp3" controls></audio></div>
+            </div>
+        </div>
+        <div class="responsive">
+            <div class="gallery">
+                <div class="image">
+                    <button class="button" style="vertical-align:middle"><span><a href="https://raw.githubusercontent.com/vidithw20/My-files/master/Taylor%20Swift%20-%20Blank%20Space.mp3">Download</a> </span></button>
+                    <img src="https://i1.sndcdn.com/artworks-000438007944-ks7dcd-t500x500.jpg" alt="" width="600" height="400">
+                </div>
+                <div class="desc"><audio src="https://github.com/vidithw20/My-files/blob/master/Taylor%20Swift%20-%20Blank%20Space.mp3?raw=true" type="audio/mp3" controls></audio></div>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="gallery">
+                <div class="image">
+                    <button class="button" style="vertical-align:middle"><span><a href="https://raw.githubusercontent.com/vidithw20/My-files/master/Taylor%20Swift%20-%20Blank%20Space.mp3">Download</a> </span></button>
+                    <img src="https://upload.wikimedia.org/wikipedia/en/d/d1/Babycoverart.jpg" alt="" width="600" height="400">
+                </div>
+                <div class="desc"><audio src="https://github.com/vidithw20/My-files/blob/master/Taylor%20Swift%20-%20Blank%20Space.mp3?raw=true" type="audio/mp3" controls></audio></div>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="gallery">
+                <div class="image">
+                    <button class="button" style="vertical-align:middle"><span><a href="https://raw.githubusercontent.com/vidithw20/My-files/master/Taylor%20Swift%20-%20Blank%20Space.mp3">Download</a> </span></button>
+                    <img src="https://i.kfs.io/album/global/95958622,0v1/fit/500x500.jpg" alt="" width="600" height="400">
+                </div>
+                <div class="desc"><audio src="https://github.com/vidithw20/My-files/blob/master/Taylor%20Swift%20-%20Blank%20Space.mp3?raw=true" type="audio/mp3" controls></audio></div>
+            </div>
+        </div>
+
+
+
+        <div class="clearfix"></div>
+
+        <div class="responsive">
+            <div class="gallery">
+                <div class="image">
+                    <button class="button" style="vertical-align:middle"><span><a href="https://raw.githubusercontent.com/vidithw20/My-files/master/Taylor%20Swift%20-%20Blank%20Space.mp3">Download</a> </span></button>
+                    <img src="https://m.media-amazon.com/images/I/71p4jC0G9pL._SS500_.jpg" alt="" width="600" height="400">
+                </div>
+                <div class="desc"><audio src="https://github.com/vidithw20/My-files/blob/master/Taylor%20Swift%20-%20Blank%20Space.mp3?raw=true" type="audio/mp3" controls></audio></div>
+            </div>
+        </div>
+        <div class="responsive">
+            <div class="gallery">
+                <div class="image">
+                    <button class="button" style="vertical-align:middle"><span><a href="https://raw.githubusercontent.com/vidithw20/My-files/master/Taylor%20Swift%20-%20Blank%20Space.mp3">Download</a> </span></button>
+                    <img src="https://tune.lk/storage/app/public/img/artist/1592126931.jpg" alt="" width="600" height="400">
+                </div>
+                <div class="desc"><audio src="https://github.com/vidithw20/My-files/blob/master/Taylor%20Swift%20-%20Blank%20Space.mp3?raw=true" type="audio/mp3" controls></audio></div>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="gallery">
+                <div class="image">
+                    <button class="button" style="vertical-align:middle"><span><a href="https://raw.githubusercontent.com/vidithw20/My-files/master/Taylor%20Swift%20-%20Blank%20Space.mp3">Download</a> </span></button>
+                    <img src="https://i1.sndcdn.com/artworks-000336363438-29lzv3-t500x500.jpg" alt="" width="600" height="400">
+                </div>
+                <div class="desc"><audio src="https://github.com/vidithw20/My-files/blob/master/Taylor%20Swift%20-%20Blank%20Space.mp3?raw=true" type="audio/mp3" controls></audio></div>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="gallery">
+                <div class="image">
+                    <button class="button" style="vertical-align:middle"><span><a href="https://raw.githubusercontent.com/vidithw20/My-files/master/Taylor%20Swift%20-%20Blank%20Space.mp3">Download</a> </span></button>
+                    <img src="https://sarigama.lk/img/songs/appsong-zqezfb2gxzcdelae.jpg" alt="" width="600" height="400">
+                </div>
+                <div class="desc"><audio src="https://github.com/vidithw20/My-files/blob/master/Taylor%20Swift%20-%20Blank%20Space.mp3?raw=true" type="audio/mp3" controls></audio></div>
+            </div>
+        </div>
+
+
+
+        <div class="clearfix"></div>
+        <div class="responsive">
+            <div class="gallery">
+                <div class="image">
+                    <button class="button" style="vertical-align:middle"><span><a href="https://raw.githubusercontent.com/vidithw20/My-files/master/Taylor%20Swift%20-%20Blank%20Space.mp3">Download</a> </span></button>
+                    <img src="https://tune.lk/storage/app/public/img/artist/1566732661.jpg" alt="" width="600" height="400">
+                </div>
+                <div class="desc"><audio src="https://github.com/vidithw20/My-files/blob/master/Taylor%20Swift%20-%20Blank%20Space.mp3?raw=true" type="audio/mp3" controls></audio></div>
+            </div>
+        </div>
+
+
+        <div class="responsive">
+            <div class="gallery">
+                <div class="image">
+                    <button class="button" style="vertical-align:middle"><span><a href="https://raw.githubusercontent.com/vidithw20/My-files/master/Taylor%20Swift%20-%20Blank%20Space.mp3">Download</a> </span></button>
+                    <img src="https://tune.lk/storage/app/public/img/artist/1568394214.jpg" alt="" width="600" height="400">
+                </div>
+                <div class="desc"><audio src="https://github.com/vidithw20/My-files/blob/master/Taylor%20Swift%20-%20Blank%20Space.mp3?raw=true" type="audio/mp3" controls></audio></div>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="gallery">
+                <div class="image">
+                    <button class="button" style="vertical-align:middle"><span><a href="https://raw.githubusercontent.com/vidithw20/My-files/master/Taylor%20Swift%20-%20Blank%20Space.mp3">Download</a> </span></button>
+                    <img src="https://decibel.lk/assets/2018/11/Iraj-Kalpana-Nayanamadu.jpg" alt="" width="600" height="400">
+                </div>
+                <div class="desc"><audio src="https://github.com/vidithw20/My-files/blob/master/Taylor%20Swift%20-%20Blank%20Space.mp3?raw=true" type="audio/mp3" controls></audio></div>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="gallery">
+                <div class="image">
+                    <button class="button" style="vertical-align:middle"><span><a href="https://raw.githubusercontent.com/vidithw20/My-files/master/Taylor%20Swift%20-%20Blank%20Space.mp3">Download</a> </span></button>
+                    <img src="https://i.pinimg.com/originals/c0/f2/f1/c0f2f1e8329361e3924bf3245eef52b9.jpg" alt="" width="600" height="400">
+                </div>
+                <div class="desc"><audio src="https://github.com/vidithw20/My-files/blob/master/Taylor%20Swift%20-%20Blank%20Space.mp3?raw=true" type="audio/mp3" controls></audio></div>
+            </div>
+        </div>
+
+        <div class="clearfix"></div>
+        <div class="responsive">
+            <div class="gallery">
+                <div class="image">
+                    <button class="button" style="vertical-align:middle"><span><a href="https://raw.githubusercontent.com/vidithw20/My-files/master/Taylor%20Swift%20-%20Blank%20Space.mp3">Download</a> </span></button>
+                    <img src="https://desawanamusic.com/uploads/covers/thumb-remix52851585283372.jpg" alt="" width="600" height="400">
+                </div>
+                <div class="desc"><audio src="https://github.com/vidithw20/My-files/blob/master/Taylor%20Swift%20-%20Blank%20Space.mp3?raw=true" type="audio/mp3" controls></audio></div>
+            </div>
+        </div>
+        <div class="responsive">
+            <div class="gallery">
+                <div class="image">
+                    <button class="button" style="vertical-align:middle"><span><a href="https://raw.githubusercontent.com/vidithw20/My-files/master/Taylor%20Swift%20-%20Blank%20Space.mp3">Download</a> </span></button>
+                    <img src="https://i1.sndcdn.com/artworks-000438007944-ks7dcd-t500x500.jpg" alt="" width="600" height="400">
+                </div>
+                <div class="desc"><audio src="https://github.com/vidithw20/My-files/blob/master/Taylor%20Swift%20-%20Blank%20Space.mp3?raw=true" type="audio/mp3" controls></audio></div>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="gallery">
+                <div class="image">
+                    <button class="button" style="vertical-align:middle"><span><a href="https://raw.githubusercontent.com/vidithw20/My-files/master/Taylor%20Swift%20-%20Blank%20Space.mp3">Download</a> </span></button>
+                    <img src="https://upload.wikimedia.org/wikipedia/en/d/d1/Babycoverart.jpg" alt="" width="600" height="400">
+                </div>
+                <div class="desc"><audio src="https://github.com/vidithw20/My-files/blob/master/Taylor%20Swift%20-%20Blank%20Space.mp3?raw=true" type="audio/mp3" controls></audio></div>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="gallery">
+                <div class="image">
+                    <button class="button" style="vertical-align:middle"><span><a href="https://raw.githubusercontent.com/vidithw20/My-files/master/Taylor%20Swift%20-%20Blank%20Space.mp3">Download</a> </span></button>
+                    <img src="https://i.kfs.io/album/global/95958622,0v1/fit/500x500.jpg" alt="" width="600" height="400">
+                </div>
+                <div class="desc"><audio src="https://github.com/vidithw20/My-files/blob/master/Taylor%20Swift%20-%20Blank%20Space.mp3?raw=true" type="audio/mp3" controls></audio></div>
+            </div>
+        </div>
+
+
+
+        <div class="clearfix"></div>
+
+        <div class="responsive">
+            <div class="gallery">
+                <div class="image">
+                    <button class="button" style="vertical-align:middle"><span><a href="https://raw.githubusercontent.com/vidithw20/My-files/master/Taylor%20Swift%20-%20Blank%20Space.mp3">Download</a> </span></button>
+                    <img src="https://m.media-amazon.com/images/I/71p4jC0G9pL._SS500_.jpg" alt="" width="600" height="400">
+                </div>
+                <div class="desc"><audio src="https://github.com/vidithw20/My-files/blob/master/Taylor%20Swift%20-%20Blank%20Space.mp3?raw=true" type="audio/mp3" controls></audio></div>
+            </div>
+        </div>
+        <div class="responsive">
+            <div class="gallery">
+                <div class="image">
+                    <button class="button" style="vertical-align:middle"><span><a href="https://raw.githubusercontent.com/vidithw20/My-files/master/Taylor%20Swift%20-%20Blank%20Space.mp3">Download</a> </span></button>
+                    <img src="https://tune.lk/storage/app/public/img/artist/1592126931.jpg" alt="" width="600" height="400">
+                </div>
+                <div class="desc"><audio src="https://github.com/vidithw20/My-files/blob/master/Taylor%20Swift%20-%20Blank%20Space.mp3?raw=true" type="audio/mp3" controls></audio></div>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="gallery">
+                <div class="image">
+                    <button class="button" style="vertical-align:middle"><span><a href="https://raw.githubusercontent.com/vidithw20/My-files/master/Taylor%20Swift%20-%20Blank%20Space.mp3">Download</a> </span></button>
+                    <img src="https://i1.sndcdn.com/artworks-000336363438-29lzv3-t500x500.jpg" alt="" width="600" height="400">
+                </div>
+                <div class="desc"><audio src="https://github.com/vidithw20/My-files/blob/master/Taylor%20Swift%20-%20Blank%20Space.mp3?raw=true" type="audio/mp3" controls></audio></div>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="gallery">
+                <div class="image">
+                    <button class="button" style="vertical-align:middle"><span><a href="https://raw.githubusercontent.com/vidithw20/My-files/master/Taylor%20Swift%20-%20Blank%20Space.mp3">Download</a> </span></button>
+                    <img src="https://sarigama.lk/img/songs/appsong-zqezfb2gxzcdelae.jpg" alt="" width="600" height="400">
+                </div>
+                <div class="desc"><audio src="https://github.com/vidithw20/My-files/blob/master/Taylor%20Swift%20-%20Blank%20Space.mp3?raw=true" type="audio/mp3" controls></audio></div>
+            </div>
+        </div>
+
+
+
+        <div class="clearfix"></div>
+        <div class="responsive">
+            <div class="gallery">
+                <div class="image">
+                    <button class="button" style="vertical-align:middle"><span><a href="https://raw.githubusercontent.com/vidithw20/My-files/master/Taylor%20Swift%20-%20Blank%20Space.mp3">Download</a> </span></button>
+                    <img src="https://tune.lk/storage/app/public/img/artist/1566732661.jpg" alt="" width="600" height="400">
+                </div>
+                <div class="desc"><audio src="https://github.com/vidithw20/My-files/blob/master/Taylor%20Swift%20-%20Blank%20Space.mp3?raw=true" type="audio/mp3" controls></audio></div>
+            </div>
+        </div>
+
+
+        <div class="responsive">
+            <div class="gallery">
+                <div class="image">
+                    <button class="button" style="vertical-align:middle"><span><a href="https://raw.githubusercontent.com/vidithw20/My-files/master/Taylor%20Swift%20-%20Blank%20Space.mp3">Download</a> </span></button>
+                    <img src="https://tune.lk/storage/app/public/img/artist/1568394214.jpg" alt="" width="600" height="400">
+                </div>
+                <div class="desc"><audio src="https://github.com/vidithw20/My-files/blob/master/Taylor%20Swift%20-%20Blank%20Space.mp3?raw=true" type="audio/mp3" controls></audio></div>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="gallery">
+                <div class="image">
+                    <button class="button" style="vertical-align:middle"><span><a href="https://raw.githubusercontent.com/vidithw20/My-files/master/Taylor%20Swift%20-%20Blank%20Space.mp3">Download</a> </span></button>
+                    <img src="https://decibel.lk/assets/2018/11/Iraj-Kalpana-Nayanamadu.jpg" alt="" width="600" height="400">
+                </div>
+                <div class="desc"><audio src="https://github.com/vidithw20/My-files/blob/master/Taylor%20Swift%20-%20Blank%20Space.mp3?raw=true" type="audio/mp3" controls></audio></div>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="gallery">
+                <div class="image">
+                    <button class="button" style="vertical-align:middle"><span><a href="https://raw.githubusercontent.com/vidithw20/My-files/master/Taylor%20Swift%20-%20Blank%20Space.mp3">Download</a> </span></button>
+                    <img src="https://i.pinimg.com/originals/c0/f2/f1/c0f2f1e8329361e3924bf3245eef52b9.jpg" alt="" width="600" height="400">
+                </div>
+                <div class="desc"><audio src="https://github.com/vidithw20/My-files/blob/master/Taylor%20Swift%20-%20Blank%20Space.mp3?raw=true" type="audio/mp3" controls></audio></div>
+            </div>
+        </div>
+
+        <div class="clearfix"></div>
+
+        <footer>
+            <div class="copyright">
+                <p>&copy H.M janith Thenuka Herath</p>
+            </div>
+        </footer>
+    </div>
+
+</body>
+
+</html>

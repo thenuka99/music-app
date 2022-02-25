@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: "Lato", sans-serif;
+        }
+        
+        .sidebar {
+            margin: 0;
+            padding: 0;
+            width: 200px;
+            background: rgb(18, 186, 73);
+            background: linear-gradient(45deg, rgba(18, 186, 73, 1) 0%, rgba(45, 46, 253, 1) 100%);
+            position: fixed;
+            height: 100%;
+            overflow: auto;
+        }
+        
+        .sidebar a {
+            display: block;
+            color: black;
+            padding: 16px;
+            text-decoration: none;
+            font-size: 40px;
+        }
+        
+        .sidebar a.active {
+            background-color: #072b00;
+            color: white;
+        }
+        
+        .sidebar a:hover:not(.active) {
+            background-color: #555;
+            color: white;
+        }
+        
+        div.content {
+            margin-left: 200px;
+            height: 100%;
+        }
+        
+        div.heading {
+            height: 300px;
+        }
+        
+        @media screen and (max-width: 700px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+            .sidebar a {
+                float: left;
+            }
+            div.content {
+                margin-left: 0;
+            }
+        }
+        
+        @media screen and (max-width: 400px) {
+            .sidebar a {
+                text-align: center;
+                float: none;
+            }
+        }
+        
+        .heading {
+            position: absolute;
+            top: 20px;
+            margin-left: 10px;
+        }
+        
+        h1.welcome {
+            font-size: 40px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: #9efcff;
+        }
+        
+        h1.musicworld {
+            font-size: 40px;
+            margin: 0px;
+            letter-spacing: 3px;
+            color: #059268;
+        }
+        
+        h1 span::before {
+            color: black;
+            font-size: 60px;
+            color: rgb(21, 255, 185);
+            font-family: 'Lobster', cursive;
+            content: "Jazz";
+            animation: animate infinite 10s;
+        }
+        
+        @keyframes animate {
+            0% {
+                content: "Jazz";
+            }
+            10% {
+                content: "Rock";
+            }
+            20% {
+                content: "Country";
+            }
+            30% {
+                content: "Hip Hop";
+            }
+            40% {
+                content: "Folks";
+            }
+            50% {
+                content: "Classical";
+            }
+            60% {
+                content: "Blues";
+            }
+            70% {
+                content: "Heavy metal";
+            }
+            80% {
+                content: "Dance";
+            }
+            90% {
+                content: "Rock";
+            }
+            100% {
+                content: "Beatbox";
+            }
+        }
+        
+        div.gallery {
+            border: 1px solid #ccc;
+        }
+        
+        div.gallery:hover {
+            border: 1px solid #777;
+        }
+        
+        div.gallery img {
+            width: 100%;
+            height: auto;
+        }
+        
+        div.desc {
+            padding: 15px;
+            text-align: center;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        .responsive {
+            padding: 0 6px;
+            float: left;
+            width: 24.99999%;
+        }
+        
+        @media only screen and (max-width: 700px) {
+            .responsive {
+                width: 49.99999%;
+                margin: 6px 0;
+            }
+        }
+        
+        @media only screen and (max-width: 500px) {
+            .responsive {
+                width: 100%;
+            }
+        }
+        
+        .clearfix:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+        .topic {
+            text-shadow: 0 .5rem 1rem black;
+            text-align: center;
+            color: rgb(207, 206, 206);
+            margin-top: 10px;
+            padding: 15px;
+            background-color: rgb(4, 30, 65);
+        }
+        
+        p {
+            color: rgb(68, 68, 68);
+            text-decoration: bold;
+        }
+        
+        footer {
+            width: 100%;
+            display: inline-block;
+            margin: 2em 0;
+            height: 70px;
+            background-color: #999;
+        }
+        
+        footer .copyright {
+            width: 50%;
+            float: left;
+        }
+        
+        footer p {
+            padding-left: 10%;
+            color: white;
+            font-size: 0.7em;
+            line-height: 70px;
+            text-transform: capitalize;
+            letter-spacing: 1px;
+        }
+        
+        .row {
+            border: black solid 2px;
+        }
+        
+        .row:after {
+            display: table;
+            clear: both;
+        }
+        
+        .clearfix:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+        .column {
+            float: left;
+            width: 50%;
+            padding: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <a class="active" href="home.html">Home</a>
+        <a href="music.html">Music</a>
+        <a href="video.html">Video</a>
+    </div>
+
+    <div class="content">
+        <img src="https://cdn.musicbed.com/image/upload/v1582214809/static/welcome/general/desktop-hero.jpg" width="100%" height="500px">
+        <div class="heading">
+            <h1 class="welcome">welcome</h1>
+
+            <h1>
+                <span></span>
+            </h1>
+
+            <h1 class="musicworld">
+                <font style="color: white;"> Music Lovers to <br> the </font>music
+                <font style="color: white;">world</font>
+            </h1>
+            <P style="color: white;">With Music world,<br> it takes just a second to add music to your page in sleek, professional playlists.<br> Choose a music block, paste in a link to your Spotify or iTunes songs, press save, and you’re done!</P>
+        </div>
+        <h1 class="topic">Trending</h1>
+        <div class="responsive">
+            <div class="gallery">
+                <iframe width=100%; height="315" src="https://www.youtube.com/embed/84MOOMHg4rM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            </div>
+        </div>
+
+
+        <div class="responsive">
+            <div class="gallery">
+                <iframe width=100%; height="315" src="https://www.youtube.com/embed/bHGdcG6R-xQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="gallery">
+                <iframe width=100%; height="315" src="https://www.youtube.com/embed/JvywnNza2R8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            </div>
+        </div>
+        <div class="responsive">
+            <div class="gallery">
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/Fy1fZGsZnPg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            </div>
+        </div>
+
+        <div class="clearfix"></div>
+
+        <div class="row">
+
+            <div class="column">
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/Fy1fZGsZnPg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="desc">rtist - Dhanith Sri <br> Lyrics & Melody - Dhanith Sri <br> Music - Sanjula Himala | Dhanith Sri<br> Mixing & Mastering - Sanjula Himala @ ReaZon Records<br> Guitars - Kavin Harshana<br>
+                    <br> Video Director - Mohamed Fayad<br> DOP - Srinika Liyanage<br> Editor,Colorist - Mohamed Fayad<br>
+                    <br> Makeup - K.A Arundani<br> Gaffer - Samantha Ariyapperuma<br> Camera Asst - Susantha Kappitiyagoda/Kavindu De Silva <br> Light Asst - FEG Crew<br> Equipment - Aerial View/FEG Crew<br>
+                    <br> Cast - Liza Felsinger/Menuka Nayanadipa/Kavin Harshana<br><br>
+
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="desc">A සඳගනාව
+                    <br><br> උදුල තරු මේ අහස් තලයෙන් වසන් වී වාගේ..<br> මාර සේනා හදට කැන්දන යාමෙ ලං වූයේ..<br> මේඝ වර්ශා ගලා හැලුනේ සේද යහනාවේ..<br> දෝරෙ යන මේ හැගුම් ගoගා ඔහේ සැලුනාවේ..<br>
+                    <br> සඳගනාවට සඳලුතල සිප.. සුව දෙන යාමයේ..<br> උණුහුමේ ගිරි තුඩට මීපැණි.. ගෙනේවී රාත්‍රියේ ආයේ..<br>
+                    <br> කාලෙකින් මං ආවෙ නැත්තේ පහල ගo තීරේ..<br> ඉවුරු තල සිප ගන්න අවසර දේද හිත කීවේ..<br> ගෙවී යන මේ භවේ, ජීවිත ගානෙ සංසාරේ...<br> මගෙම වී පතිනිය නුඹේ දිවි ගෙවේවා නිබදේ..<br>
+                    <br> සඳගනාවට සදලුතල සිප.. සුව දෙන යාමයේ..<br> උණුහුමේ ගිරි තුඩට මීපැණි.. ගෙනේවී රාත්‍රියේ ආයේ..<br>
+
+                </div>
+            </div>
+
+
+        </div>
+        <div class="clearfix"></div>
+
+        <div class="row">
+
+            <div class="column">
+                <div class="desc">
+                    <br> Lyrics: <br> දෑත දරා ඇවිදින් ආදරයෙන් මා වෙනුවෙන් <br> හිඳිනා අයුරු<br> මිදෙමි දැහැනෙන් හැඟුමන් පාමුල<br> හිත් වාරු බිඳේවී<br> ඔබ ලඟ මියුරූ<br>
+                    <br> සේද වළා ඇතුරාලා සඳපායා ඇති රෑ <br> තුරුලේ ගෙවමූ<br> මා පැතු ඒ යුග නෙත් ආදර හිත් ආදරයෙන් හමුවීමයි හිමිවූ<br>
+                    <br> මනහාරී නුරාවී නෙතු මානේ සිනාසී<br> තව ලං වී<br> පෙමින් දම් ගොතමී...<br> ගිම්ගානේ තුහීන ගෙනා ඔබෙන් මා නිවෙමී<br> සදා කල් හිදිමි<br> තරු යායේ පුරා හඳ වාගේ<br> වළාවක මාගේ ආලේ ලියමී<br>
+                </div>
+            </div>
+
+            <div class="column">
+                <iframe width=100%; height="315" src="https://www.youtube.com/embed/84MOOMHg4rM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="desc">Dátha Dara (දෑත දරා) A Naadhagama Story -Official Video<br> Artist - Ridma Weerawadane , Dhanith Sri , Methun SK , Supun Perera , Dinesh Gamage , Dinupa Kodagoda<br> Melody - Ridma Weerawardane<br> Lyrics - Nisal Gamage<br> Music Produced
+                    and Co-Mixed by Thisal Randunu (August Records)<br> Recorded & Co Produced by Ranga Weerasekara (Starline Records)<br> Mixed and Mastered by - Vinod Melpitiya (WAYO)<br> Guitars - Thisal Randunu<br> Violin - Thisara Bandara<br> Piano
+                    - Ruwini Serasinghe<br> Flutes - Wayanaka Perara<br> Bass Guitar - Kanishka Bandara<br>
+                    <br> Videography Partners <br> Sync Intelligence<br> EightyNine Cinema<br> Pixalite Productions<br>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+
+            <div class="row">
+
+                <div class="column">
+                    <iframe width=100%; height="315" src="https://www.youtube.com/embed/JvywnNza2R8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div class="desc">Artist - Kanchana Anuradhi<br> Lyrics - Kanchana Anuradhi<br> Melody - Kanchana Anuradhi<br> Music Arrangement - Dhanith Sri<br> Music composition - Sanjula Himala @ReazonsRecords<br> Mix and Mastering - Lahiru Perera @MusicOven<br>                        Guitars - Ranil E Panil<br> Nadhaswaram - Charan Saranraj Balasupiramaniam <br> Percussion - Isuru perera<br> Character art and Animation - Rio Shuvo | Bangladesh<br> Lyric video Animation - Chameera J Hettiarachchi<br>
+
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="desc"><br> Lyrics:
+                        <br> සබඳේ පැතුවා සේ <br> හමුවේදෝ ආයේ........<br> කුණාටුවක හසුවී මගේ සිත<br> ඇදී තිබේ නොමැකීම<br> ඇගේ රුව අ හහ් <br> ඇගේ රුව අ හහ් <br>
+                        <br> මේ සැඳෑවේ ගං තෙරේදී<br> රන් රුවේ මා නුඹ දකීවී<br> හීන ගානේ මා ඇදේවී<br> චන්ද්‍රයාමේ නින්ද නේවී<br>
+                        <br> උදුරාවී මාගේ ආලේ<br> මැවු හීනේ නුඹ නොවෙදෝ අනේ<br> මා හදේ නුඹේ රුව නොමැකේදෝ ආයේ<br>
+                        <br> නලල කුංකුම රූ අඳීවී<br> හාදු අමුනා ගෙල බදීවී<br> ස්නේහ වර්ශා වැටෙන වේලේ<br> දමා යනු බෑ සඳේ වෙන්වී<br>
+                        <br> උදුරාවී මාගේ ආලේ<br> මැවු හීනේ නුඹ නොවෙදෝ අනේ<br> මා හදේ නුඹේ රුව නොමැකේදෝ ආයේ<br>
+                        <br> කුණාටුවක හසුවී මගේ සිත<br> ඇදී තිබේ නොමැකීම<br> ඇගේ රුව අ හහ් <br> ඇගේ රුව අ හහ් <br>
+                    </div>
+                </div>
+
+                <p>Click the button to get your coordinates.</p>
+
+                <button onclick="getLocation()">coordinates</button>
+
+                <p id="demo"></p>
+
+                <script>
+                    var x = document.getElementById("demo");
+
+                    function getLocation() {
+                        if (navigator.geolocation) {
+                            navigator.geolocation.getCurrentPosition(showPosition);
+                        } else {
+                            x.innerHTML = "Geolocation is not supported by this browser.";
+                        }
+                    }
+
+                    function showPosition(position) {
+                        x.innerHTML = "Latitude: " + position.coords.latitude +
+                            "<br>Longitude: " + position.coords.longitude;
+                    }
+                </script>
+
+                <footer>
+                    <div class="copyright">
+                        <p>&copy H.M janith Thenuka Herath</p>
+                    </div>
+                </footer>
+            </div>
+
+        </div>
+
+
+
+
+
+</body>
+
+</html>
